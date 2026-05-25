@@ -79,24 +79,32 @@ face-recognition-system/
 ├── requirements.txt
 └── README.md
 
+
+
 Installation Guide
+
+
 1. Clone Repository
 git clone https://github.com/anjalimahapatra2004/face-recognition-system.git
 
 cd face-recognition-system
 
 2. Create Virtual Environment
+
 Windows
+
 python -m venv venv
 
-Activate:
+Activate virtual environment:
 
 venv\Scripts\activate
+
 
 3. Install Dependencies
 pip install -r requirements.txt
 
 
+PostgreSQL Setup
 4. Install PostgreSQL
 
 Download PostgreSQL:
@@ -108,8 +116,6 @@ During installation:
 Username: postgres
 Password: your password
 Port: 5432
-
-
 5. Create Database
 
 Open PostgreSQL Query Tool and run:
@@ -125,16 +131,17 @@ Update:
 
 DATABASE_URL = "postgresql://postgres:YOUR_PASSWORD@localhost:5432/face_db"
 
-7. Run Server
+Run the Project
+
+7. Start FastAPI Server
 uvicorn app.main:app --reload
 
-Server starts at:
+Server runs at:
 
 http://127.0.0.1:8000
 
 
 Pages
-
 Register Face
 http://127.0.0.1:8000/register
 
@@ -145,7 +152,7 @@ http://127.0.0.1:8000/login
 
 Database Table
 
-Users table stores:
+The users table stores:
 
 id
 name
@@ -154,7 +161,6 @@ face_encoding
 
 
 PostgreSQL Useful Queries
-
 Show Tables
 \dt
 View Users
@@ -165,19 +171,28 @@ Drop Table
 DROP TABLE users;
 
 
-
 API Endpoints
+
+
 Register Face
 POST /register-face
+
+
 Login Face
 POST /login-face
+
+
 How Face Recognition Works
 Webcam captures image
 Image sent to FastAPI backend
 face_recognition library detects face
 Face encoding generated
 Encoding stored in PostgreSQL
+
 During login:
+
 New encoding generated
 Compared with stored encodings
 If matched → Login Success
+
+
