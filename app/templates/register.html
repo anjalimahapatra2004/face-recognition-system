@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Face</title>
+
+    <link rel="stylesheet" href="/static/css/register.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="register-card">
+
+            <h1>Face Registration</h1>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Name"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+            >
+
+            <video
+                id="video"
+                autoplay
+                playsinline
+                muted
+            ></video>
+
+            <button id="registerBtn">
+                Register Face
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+    <script src="/static/js/register.js"></script>
+
+</body>
+
+</html>

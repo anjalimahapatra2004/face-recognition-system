@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+python-dotenv
+pydantic
+pydantic-settings
+python-multipart
+jinja2
+passlib[bcrypt]
+python-jose
+opencv-python
+numpy
+face-recognition
+Pillow
+email-validator
